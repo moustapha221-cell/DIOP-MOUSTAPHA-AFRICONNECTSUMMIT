@@ -1,0 +1,18 @@
+ /* RESET DE BASE */
+ *{
+  margin: 0;
+  padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ /* VARIABLE ROOT */
+ :root{
+--primary : #ffff;
+--secondary: #000;
+--tertiary: #9d4edd;
+--quatery:#c77dff;
+--font-titre: 'Geomini',sans-serif;
+--font-body: 'Roboto',sans-serif;
+--bg : #0b0a0f;
+--espace : 1rem;
+ }
