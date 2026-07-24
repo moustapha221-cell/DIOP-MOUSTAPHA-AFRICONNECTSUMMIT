@@ -14,6 +14,276 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!-- NAVBAR -->
+     <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html">
+                    <img src="images/logo.jpeg" alt="logo AfriconnectSummit" height="50">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervennants</a></li>
+                    <li><a href="contact.html">contact</a></li>
+
+                </ul>
+                <div class="nav-actions">
+                    <!-- Toggle dark/light gere en js -->
+                     <button class="theme-toggle" aria-label="changer de theme">
+                        <i class="bi bi-moon-stars-fill"></i>
+                     </button>
+                        <!-- Menu hamburger pour mobile -->
+                         <button class="hamburger" aria-label="Ouvrir le menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                         </button>
+                </div>
+            </div>
+
+        </nav>
+     </header>
+     
+     <main>
+        <!-- HERO -->
+         <section class="hero">
+            <div class="container hero-content">
+                <p class="hero-eyebrow fade-in-up">20 au 22 Novembre 2026 - Dakar,Senegal</p>
+                <h1 class="fade-in-up delay-1">
+                    Avenir de l'Afrique se connecte <span class="highlight">a AfriconnectSummit</span>
+                </h1>
+                <p class="hero-subtitle fade-in-up delay-2">
+                    Un sommet international de conferences,d'atliers et de rencontres
+                    pour entrepreneur,innovateurs et investisseurs engager pour l'Afrique.
+                </p>
+                <p class="hero-cta fade-in-up d3">
+                    <a href="contact.html" class="btn btn-primary">Reservew votre place</a>
+                    <a href="programme.html" class="btn btn-outline">Decouvrir le programme</a>
+                </p>
+                <!-- Compte a rebours mis a jour en js chaque seconde -->
+                 <div class="countdown fade-in-up delay-3">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="countdown-deys">0</span>
+                        <span class="countdown-label">Heures</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="countdown-minutes">0</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="countdown-Secondes">0</span>
+                        <span class="countdown-label">Secondes</span>
+                    </div>
+                 </div>
+                 <div class="hero-image fade-in-up delay-4">
+                    <img src="" alt="">
+                 </div>
+            </div>
+         </section>
+         <!-- CHIFFERES CLES -->
+          <section class="key-numbers">
+            <div class="container">
+                <p class="section-eyebrow reveal">En chiffres</p>
+                <h2 class="section-title reveal">Un impact mesurable,une vusion partager</h2>
+                <div class="stats-grid">
+                    <div class="stat-card reveal zoom">
+                        <span class="stat-number" data-target="1200">0</span>
+                        <p class="stat-label">Participants</p>
+                    </div>
+                    <div class="stat-card reveal zoom">
+                        <span class="stat-number" data-target="48">0</span>
+                    </div>
+                    <div class="stat-card reveal zoom">
+                        <span class="stat-number" data-target="3">0</span>
+                        <p class="stat-label">Jours</p>
+                    </div>
+                    <div class="stat-card reveal zoom">
+                        <span class="stat-number" data-target="12">0</span>
+                        <p class="stat-label">Pays representer</p>
+                    </div>
+                </div>
+            </div>
+          </section>
+          <!-- POURQUOI PARTICIPER -->
+          <section class="raisons">
+            <h2>Pourquoi participer?</h2>
+            <div class="raisons-container">
+                <article class="raisons-card">
+                    <i class="bi bi-people-fill"></i>
+                    <h3>Networking</h3>
+                    <p>
+                        Rencontrez des professionnels , startups et investisseurs venus de toute l'afrique
+                    </p>
+                </article>
+                <article class="raisons-card">
+                    <i class="bi bi-lightbulb-fill"></i>
+                    <h3>Innovations</h3>
+                    <p>
+                         Découvrez les derniéres tendances en intelligence artificielle, cloud et cybersécurité
+                    </p>
+                </article>
+                <article class="raisons-card">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                    <h3>opportunites</h3>
+                    <p>
+                         Trouvez des partenaires, des emplois ou développpeurs votre prochain projet technologique
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="vedette">
+            <h2>Intervenants vedettes</h2>
+            <div class="vedette-grid">
+                <article class="vedette-card">
+                    <img src="images/21594dc0d4f370db9a13dca51a07e02d.jpg" alt="">
+                    <h3>Mame Diallo</h3>
+                    <p>Expert IA</p>
+                    <span>Sénégal</span>
+                </article>
+                  <article class="vedette-card">
+                    <img src="images/profil-f2.jpg" alt="">
+                    <h3>Moussa fall</h3>
+                    <p>CEO TechNova</p>
+                    <span>Ghana</span>
+                </article>
+                 <article class="vedette-card">
+                    <img src="images/cdcb4a70e8fdfa338bf863ce650d6f5f.jpg" alt="">
+                    <h3>Fatou diop</h3>
+                    <p>UX Designer</p>
+                    <span>Sénégal</span>
+                </article>
+                  <article class="vedette-card">
+                    <img src="images/profil-m.jpg" alt="">
+                    <h3>Ibrahim</h3>
+                    <p>Data Scientist</p>
+                    <span>Cote d'Ivoire</span>
+                </article>
+                 </div>
+            <a href="intervenants.html" class="btn-vedette">Voir tout les intervenants</a>
+        </section>
+         <section class="sponsors">
+            <div class="sponsors-title2">
+                <p>Partenaires</p>
+ <h2>Nos Sponsors</h2>
+ <span>
+    Ils nous accompagnent et soutiennent l'innovations et le developpements de la tech en Afrique
+ </span>
+            </div>
+            <div class="sponsors-container">
+                <div class="sponsors-niveau or">
+                    
+
+                    <div class="niveau-titre"> Gold</div>
+                    <div class="sponsors-grid">
+                        <div class="sponsors-card">
+                    <img src="images/SPONSOR1.jpg" alt="">
+                    <p>Wave</p>
+                     </div>
+                      <div class="sponsors-card">
+                        <img src="images/Microsoft-removebg-preview.png" alt="">
+                        <p>Microsoft</p>
+                     </div>
+                      <div class="sponsors-card">
+                    <img src="images/Descargar lenovo logo marca teléfono símbolo negro diseño China móvil vector ilustración.jpg">
+                    <p>Lenovo</p>
+                </div>
+                 </div>
+                  </div>
+                  <div class="sponsors-niveau argent">
+
+                    <div class="niveau-titre">ARGENT</div>
+                    <div class="sponsors-grid">  
+                     <div class="sponsors-card">  
+                    <img src="images/SPONSORS (3).jpg" alt="">
+                    <p>Orabanque</p>
+                     </div>
+              <!-- <div class="sponsors-card">  
+                <img src="image/Senegal-removebg-preview.png" alt="">
+                <p>Fonderation Senegalaise de Football</p>
+              </div> -->
+                <div class="sponsors-card">  
+                    <img src="images/SPONSORS (2).jpg" alt="">
+                    <p>Mix by yas</p>
+                </div>
+                 </div>
+                  </div>
+                   <!-- <div class="sponsors-niveau bronze">
+                    <div class="niveau-titre"> BRONZE</div>
+                      <div class="sponsors-grid"> 
+                        <div class="sponsors-card">  
+                    <img src="image/télécharger (19).jpg" alt="">
+                    <p>GOMYCODE</p> -->
+                    </div>
+                     <div class="sponsors-card">
+                        <img src="images/L_Aventure_Peugeot-removebg-preview.png" alt="">
+                        <p>Total Energies</p>
+                     </div>
+                    <!-- <div class="sponsors-card">  
+                    <img src="image/Download Free Vectors, Images, Photos & Videos _ Vecteezy.jpg" alt="">
+                    <p>NEXTGEN</p>
+                </div>
+            </div> -->
+            </div>
+        </section>
+     </main>
+     <footer class="footer">
+
+    <div class="footer-container">
+        <div class="footer-brand">
+
+            <img src="images/Logo.jpeg" alt="Logo AfriConnect Summit"height="50">
+            <p>
+                Le rendez-vous panafricain qui réunit développeurs,
+                entrepreneurs et investisseurs autour de l'innovation.
+            </p>
+
+            <div class="social-links">
+
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+
+            </div>
+
+        </div>
+        <div class="footer-col">
+
+            <h4>Navigation</h4>
+
+            <a href="index.html">Accueil</a>
+            <a href="programme.html">Programme</a>
+            <a href="intervenants.html">Intervenants</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+        <div class="footer-contact">
+
+            <h4>Contact</h4>
+
+            <p><i class="bi bi-geo-alt"></i> Dakar, Sénégal</p>
+            <p><i class="bi bi-envelope"></i> contact@africonnect.com</p>
+            <p><i class="bi bi-telephone"></i> +221 77 446 30 21</p>
+
+            <button id="back-to-top">
+                <i class="bi bi-arrow-up"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            <span id="year"></span> AfriConnect Summit.
+            Tous droits réservés.
+        </p>
+
+    </div>
+
+</footer>
  <script src="js/main.js"></script>   
 </body>
 </html>
