@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Geomini:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -19,7 +20,7 @@
         <nav class="navbar">
             <div class="container">
                 <a href="index.html">
-                    <img src="images/Logo.jpeg" alt="logo AfriconnectSummit"height="50">
+                    <img src="images/logo-5.png" alt="logo AfriconnectSummit"height="200">
                 </a>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Accueil</a></li>
@@ -70,27 +71,23 @@
                                 <option >Sponsor</option>
                                 <option >Presse</option>
                             </select>
-                </form>
-
-            </div>
-             <div class="form-champ">
+                         </div>
+                         <div class="form-champ">  
                             <label for="pays">Pays</label>
                             <select  id="pays">
                                 <option value="">Selectionner</option>
                                 <option >Sénégal</option>
                                  <option >Cote d'Ivoire</option>
-                                  <option >Mali</option>
-                                   <option >Ghana</option>
-                                    <option >Nigeria</option>
-                                     <option >Cameroun</option>
-                                      <option >Bénin</option>
-                                       <option >Togo</option>
-                                        <option >RDC</option>
-                                         <option >Burkina Fasso</option>
+                                 <option >Mali</option>
+                                  <option >Ghana</option>
+                                  <option >Nigeria</option>
+                                   <option >Cameroun</option>
+                                    <option >Bénin</option>
+                                   <option >Togo</option>
+                                     <option >RDC</option>
+                                      <option >Burkina Fasso</option>
                             </select>
-
-        </div>
-          </div>
+                        </div>
                         <div class="form-champ">
                             <label for="message">Motivations</label>
                             <textarea id="message" rows="6"></textarea>
@@ -98,16 +95,33 @@
                         <button type="submit">Envoyer ma demande </button>
                     </form>
                      </div>
-                <div class="info">
-                    <h2>Informations </h2>
-                    <p><strong><i class="bi bi-pin-map"></i>Lieu:</strong>Dakar, Sénégal</p>
-                    <p><strong><i class="bi bi-calendar-date"></i>Date:</strong>Du 15 au 17 Novembre 2026</p>
-                     <p><strong><i class="bi bi-envelope-arrow-down"></i>Email:</strong>contact@africonnect.com</p>
-                      <p><i class="bi bi-telephone-forward"></i>Téléphone:</strong>+221 77 446 30 21</p>
-                      <p>Notre équipe répond à toutes vos questions concernant
-                        les Inscriptions et l'organisations du sommet
-                      </p>
-                </div>
+                   <!-- Colonne droite : informations pratiques -->
+                    <div class="contact-info">
+                        <h2>Informations pratiques</h2>
+                        
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <strong>Lieu</strong>
+                                <p>Dakar, Sénégal</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-calendar-event-fill"></i>
+                            <div>
+                                <strong>Dates</strong>
+                                <p>Du 12 au 14 novembre 2026</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div>
+                                <strong>Téléphone</strong>
+                                <p>+221 77 652 57 80</p>
+                            </div>
+                        </div>
                 </div>
         </section>
          <section class="faq">
@@ -159,8 +173,6 @@
 
     <div class="footer-container">
         <div class="footer-brand">
-
-            <img src="images/Logo.jpeg" alt="Logo AfriConnect Summit"height="50">
             <p>
                 Le rendez-vous panafricain qui réunit développeurs,
                 entrepreneurs et investisseurs autour de l'innovation.
