@@ -1,4 +1,4 @@
- /* RESET DE BASE */
+                                                                     /* RESET DE BASE */
  *{
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--tertiary);
+    background-color: var(--primary);
     height: 80px;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -50,9 +50,6 @@
     gap: 35px;
     list-style: none;
 }
-.nav img{
-    height: 50px;
-}
 .nav-links a{
     color: var(--secondary);
     text-decoration: none;
@@ -61,8 +58,7 @@
 }
 .nav-links a:hover,
 .nav-links a.action{
-    color: var(--primary);
-
+    color: var(--tertiary);
 }
 .nav-action{
     display: flex;
@@ -82,7 +78,6 @@
 
 }
 .hero{
-
     min-height: 100vh;
     padding: 120px 8% 60px;
     display: flex;
@@ -139,12 +134,12 @@
     color: var(--primary);
 }
 .btn-outline{
-    border: 2px solide var(--tertiary);
+    border: 2px solid var(--tertiary);
     color: var(--primary);
 }
 
 /* HERO IMAGE */
-.hero-imqge{
+.hero-image{
     margin-top: 35px;
 }
 .hero-image img{
@@ -218,10 +213,6 @@ section {
     color: var(--primary);
 }
 /* POURQUOI PARTICIPER */
-.raisons {
-    /* background-color: var(--bg); */
-    /* color: var(--primary); */
-}
 .raisons-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -728,7 +719,7 @@ thead {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
-    border-bottom: 1px solid rgba(255,255,255,0.1); /* séparation fine entre questions */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .faq-item input[type="checkbox"] {
     display: none;
@@ -775,14 +766,14 @@ thead {
 
 /* INFORMATIONS PRATIQUES */
 .contact-info{
-    background: var(--surface);
+    background: var(--primary);
     padding: 2rem;
     border-radius: 16px;
-    border:  2px solid var(--accent);
+    border:  2px solid var(--tertiary);
     box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
 }
 .contact-info h2{
-    color: var(--accent);
+    color: var(--secondary);
     text-align: center;
     font-size: 2.2rem;
     font-weight: 800;
@@ -795,7 +786,7 @@ thead {
     gap: 1rem;
     padding: 1.3rem 0;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--quatery);
 }
 .info-item i{
    width: 50px;
@@ -818,7 +809,7 @@ thead {
     font-size: 1.05rem;
 }
 .info-item p{
-    color: var(--text-light);
+    color: var(--quatery);
     line-height: 1.6rem;
 }
 /* SECTION MAP */
@@ -830,4 +821,376 @@ thead {
 .map iframe {
     max-width: 100%;
     border-radius: 10px;
+}
+/* Évite les débordements */
+
+html,
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+}
+   /* TABLETTE : 768 PX */
+@media screen and (max-width: 768px){
+
+    /* NAVIGATION */
+
+    .navbar .container{
+        padding: 0 20px;
+    }
+
+    .navbar img{
+        width: 150px;
+    }
+
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 25px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background-color: var(--tertiary);
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .hamburger span{
+        display: block;
+        width: 26px;
+        height: 3px;
+        background-color: var(--secondary);
+    }
+
+    /* HERO */
+
+    .hero{
+        padding: 120px 30px 60px;
+    }
+
+    .hero h1{
+        font-size: 2.7rem;
+    }
+
+    .hero-content{
+        width: 100%;
+    }
+
+    /* GRILLES */
+
+    .stats-grid,
+    .raisons-container,
+    .vedette-grid,
+    .sponsors-grid,
+    .theme-grid,
+    .sec-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* SECTIONS */
+
+    section,
+    .vedette,
+    .theme,
+    .sec-carte{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* INTERVENANTS */
+
+    .sec-card{
+        padding: 25px;
+    }
+
+    .sec-card img{
+        height: 230px;
+    }
+
+    /* PROGRAMME */
+
+    .tab{
+        flex-wrap: wrap;
+    }
+
+    .btn-content{
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table{
+        min-width: 650px;
+    }
+
+    /* CONTACT */
+
+    .contact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form,
+    .contact-info{
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /* FOOTER */
+
+    .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-brand{
+        grid-column: 1 / -1;
+    }
+}
+   /* MOBILE : 375 PX */
+
+@media screen and (max-width: 480px){
+
+    /* NAVIGATION */
+
+    .navbar{
+        height: 70px;
+    }
+
+    .navbar .container{
+        padding: 0 15px;
+    }
+
+    .navbar img{
+        width: 125px;
+    }
+
+    .nav-links{
+        top: 70px;
+    }
+
+    .theme-toggle{
+        width: 35px;
+        height: 35px;
+    }
+
+    /* HERO */
+
+    .hero{
+        min-height: 100vh;
+        padding: 100px 15px 40px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle{
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta,
+    .hero-button{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-cta .btn,
+    .hero-button .btn{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* COMPTE À REBOURS */
+
+    .countdown{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .countdown-item{
+        width: 100%;
+    }
+
+    /* ESPACEMENT */
+
+    section,
+    .vedette,
+    .theme,
+    .sec-carte,
+    .filtre,
+    .contact,
+    .faq{
+        padding: 40px 15px;
+    }
+
+    /* GRILLES EN UNE COLONNE */
+
+    .stats-grid,
+    .raisons-container,
+    .vedette-grid,
+    .sponsors-grid,
+    .theme-grid,
+    .sec-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* TITRES */
+
+    .section-title,
+    .theme-titre h2,
+    .vedette-t h2,
+    .contact-info h2{
+        font-size: 1.8rem;
+    }
+
+    /* CARTES */
+
+    .theme-card{
+        padding: 25px;
+    }
+
+    .sec-card{
+        padding: 18px;
+        margin-top: 0;
+    }
+
+    .sec-card img{
+        width: 100%;
+        height: 300px;
+    }
+
+    .vedette-card img{
+        width: 120px;
+        height: 120px;
+    }
+
+    /* FILTRES */
+
+    .filters{
+        gap: 8px;
+    }
+
+    .filter-btn{
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* PROGRAMME */
+
+    .programme{
+        padding: 40px 15px;
+    }
+
+    .tab{
+        gap: 8px;
+    }
+
+    .btn-tab{
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .btn-content{
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table{
+        min-width: 600px;
+    }
+
+    th,
+    td{
+        padding: 10px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    /* CONTACT */
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .form,
+    .contact-info{
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .form{
+        padding: 20px;
+    }
+
+    .form button{
+        width: 100%;
+    }
+
+    .info-item{
+        gap: 10px;
+    }
+
+    .info-item i{
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+
+    /* FAQ */
+
+    .faq{
+        padding: 40px 15px;
+    }
+
+    .faq-item label{
+        padding: 15px 10px;
+    }
+
+    /* CARTE */
+
+    .map{
+        padding: 30px 15px;
+    }
+
+    .map iframe{
+        width: 100%;
+        height: 280px;
+    }
+
+    /* FOOTER */
+
+    .footer-container{
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    .footer-brand{
+        grid-column: auto;
+    }
+
+    .footer-col a{
+        margin-bottom: 10px;
+    }
 }
