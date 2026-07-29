@@ -1194,3 +1194,67 @@ img{
         margin-bottom: 10px;
     }
 }
+
+body.dark-mode {
+    --primary: #121212;
+    --secondary: #ffffff;
+    --bg: #000000;
+}
+
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+
+body.dark-mode .hero,
+body.dark-mode .key-numbers,
+body.dark-mode .raisons,
+body.dark-mode .vedette,
+body.dark-mode .sponsors,
+body.dark-mode .programme,
+body.dark-mode .theme,
+body.dark-mode .filtre,
+body.dark-mode .contact,
+body.dark-mode .faq {
+    background-color: #000;
+    color: #fff;
+}
+body.dark-mode .countdown-item,
+body.dark-mode .raisons-card,
+body.dark-mode .vedette-card,
+body.dark-mode .sponsors-card,
+body.dark-mode .theme-card,
+body.dark-mode .sec-card,
+body.dark-mode .contact-info,
+body.dark-mode .form {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #9d4edd;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode label {
+    color: #fff;
+}
+
+body.dark-mode .theme-toggle {
+    color: #fff;
+}
+
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: #9d4edd;
+}
+body.dark-mode .btn-outline {
+    color: #fff;
+    border-color: #9d4edd;
+}

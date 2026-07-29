@@ -31,7 +31,7 @@
                 </ul>
                 <div class="nav-actions">
                     <!-- Toggle dark/light gere en js -->
-                     <button class="theme-toggle" >
+                     <button id="theme-toggle" >
                         <i class="bi bi-moon-stars-fill"></i>
                      </button>
                         <!-- Menu hamburger pour mobile -->
@@ -61,19 +61,19 @@
                 <!-- Compte a rebours mis a jour en js chaque seconde -->
                  <div class="countdown fade-in-up delay-3">
                     <div class="countdown-item">
-                        <span class="countdown-number" id="countdown-deys">0</span>
+                        <span class="countdown-number" id="days">0</span>
                         <span class="countdown-label">Jours</span>
                     </div>
                     <div class="countdown-item">
-                        <span class="countdown-number" id="countdown-deys">0</span>
+                        <span class="countdown-number" id="hours">0</span>
                         <span class="countdown-label">Heures</span>
                     </div>
                     <div class="countdown-item">
-                        <span class="countdown-number" id="countdown-minutes">0</span>
+                        <span class="countdown-number" id="minutes">0</span>
                         <span class="countdown-label">Minutes</span>
                     </div>
                     <div class="countdown-item">
-                        <span class="countdown-number" id="countdown-Secondes">0</span>
+                        <span class="countdown-number" id="seconds">0</span>
                         <span class="countdown-label">Secondes</span>
                     </div>
                  </div>
@@ -255,10 +255,7 @@
 
     <div class="footer-bottom">
 
-        <p>
-            <span id="year"></span> AfriConnect Summit.
-            Tous droits réservés.
-        </p>
+        <p>&copy; <span id="annee-actuelle"></span> AfriConnect Summit. Tous droits réservés.</p>
 
     </div>
 

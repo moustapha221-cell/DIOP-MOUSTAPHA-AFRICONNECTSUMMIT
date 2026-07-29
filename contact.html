@@ -31,7 +31,7 @@
                 </ul>
                 <div class="nav-actions">
                     <!-- Toggle dark/light gere en js -->
-                     <button class="theme-toggle" aria-label="changer de theme">
+                     <button id="theme-toggle" aria-label="changer de theme">
                         <i class="bi bi-moon-stars-fill"></i>
                      </button>
                         <!-- Menu hamburger pour mobile -->
@@ -49,7 +49,7 @@
         <div class="contact-container">
             <div class="form">
                 <h2>Inscrivez-vous a la conference</h2>
-                <form action="">
+                <form action="https://formspree.io/f/xxxxxxxx" id="contactForm">
                     <div class="form-champ">
                         <label for="fullname">Nos complet</label>
                         <input type="text" id="fullname">
@@ -90,10 +90,11 @@
                         </div>
                         <div class="form-champ">
                             <label for="message">Motivations</label>
-                            <textarea id="message" rows="6"></textarea>
+                            <textarea id="motivations" rows="6"></textarea>
                         </div>
                         <button type="submit">Envoyer ma demande </button>
                     </form>
+                    <div id="form-message"></div>
                      </div>
                    <!-- Colonne droite : informations pratiques -->
                     <div class="contact-info">
@@ -216,10 +217,7 @@
 
     <div class="footer-bottom">
 
-        <p>
-            <span id="year"></span> AfriConnect Summit.
-            Tous droits réservés.
-        </p>
+        <p>&copy; <span id="annee-actuelle"></span> AfriConnect Summit. Tous droits réservés.</p>
 
     </div>
 
