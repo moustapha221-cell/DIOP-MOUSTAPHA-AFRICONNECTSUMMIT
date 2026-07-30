@@ -27,7 +27,7 @@ const countdownInterval = setInterval(function () {
     document.getElementById("minutes").textContent = minutes;
     document.getElementById("seconds").textContent = seconds;
 }, 1000);
-//   ANIMATION DES CHIFFRES CLÉS
+// COMPTEURS ANNIMER
 const statNumbers = document.querySelectorAll(".stat-number");
 
 statNumbers.forEach(function (statNumber) {
@@ -51,7 +51,6 @@ statNumbers.forEach(function (statNumber) {
     }, 20);
 
 });
-// Vérifier le thème sauvegardé
 // BUTTON MODE JOURS/NUITS
 const toggleBtn = document.getElementById('theme-toggle');
 const icon = toggleBtn.querySelector('i');
@@ -141,4 +140,145 @@ if (contactForm) {
 
     });
 
+}
+
+//ANIMATION AU SCROLL//
+const elements = document.querySelectorAll(
+  "section, .card, .speaker-card, .sponsor-card, .stat-card, .feature-card, .faq-item, form, h1, h2, h3, p, .btn"
+);
+
+// État initial
+elements.forEach((el) => {
+  if (!el.closest("footer")) {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(40px)";
+    el.style.transition = "all 0.8s ease";
+  }
+});
+
+// Animation au scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+elements.forEach((el) => {
+  if (!el.closest("footer")) {
+    observer.observe(el);
+  }
+});
+
+const tabs = document.querySelectorAll(".btn-tab");
+const contents = document.querySelectorAll(".btn-content");
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        tab.classList.add("active");
+        contents[index].classList.add("active");
+
+    });
+});
+
+// =========================
+// ONGLETS DU PROGRAMME
+// =========================
+// FILTRAGE ONGLETS PROGRAMME
+const bouttons = document.querySelectorAll('.btn-tab');
+const contenus = document.querySelectorAll('.tab-container');
+bouttons.forEach((boutton) => {
+    boutton.addEventListener('click',() => {
+        bouttons.forEach((btn) => {
+            btn.classList.remove('active');
+        } );
+        contenus.forEach((contenu) => {
+            contenu.classList.remove('active');
+        });
+        boutton.classList.add('active');
+        document.getElementById(boutton.dataset.tab)
+        .classList.add('active')
+    } );
+});
+
+
+// FILTRAGE INTERVENANTS
+const filterButtons = document.querySelectorAll('.filter-btn');
+const persoCards = document.querySelectorAll('.sec-card');
+filterButtons.forEach((boutton) => {
+    boutton.addEventListener('click',() => {
+        filterButtons.forEach((btn) => {
+            btn.classList.remove('active');
+        });
+        boutton.classList.add('active');
+        const filter = boutton.dataset.filter;
+        persoCards.forEach((card) => {
+        const categori = card.dataset.categori;
+if (filter === 'Tous' || categori === filter){
+    card.classList.remove('non');
+}else  {
+    card.classList.add('non');
+}
+        });
+
+    });
+} );
+// BUTTON TOP
+const backToTop = document.querySelector(".back-to-top");
+
+if (backToTop) {
+    window.addEventListener("scroll", () => {
+        backToTop.classList.toggle("show", window.scrollY > 300);
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
+//  NAVBAR INTERACIVE AU SCROLL
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll',() => {
+    if (window.scrollY >80){
+        navbar.classList.add('scrolled');
+  }else{
+    navbar.classList.remove('scrolled');
+}
+} );
+// NAVBAR BUTTON 
+const btnMobile = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+btnMobile.addEventListener('click', () =>{
+    navLinks.classList.toggle('active');
+});
+// ANIMATIONS FADE-IN , SLIDE-LEFT, ZOOM-IN 
+const animatedElements = document.querySelectorAll(
+    ".fade-in, .slide-in, .zoom-in"
+);
+
+if (animatedElements.length > 0) {
+    const animationObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                animationObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+    animatedElements.forEach((element) => {
+        animationObserver.observe(element);
+    });
 }
