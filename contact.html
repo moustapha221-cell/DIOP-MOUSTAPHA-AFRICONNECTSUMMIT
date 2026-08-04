@@ -29,40 +29,42 @@
                     <li><a href="contact.html">contact</a></li>
 
                 </ul>
-                <div class="nav-actions">
-                    <!-- Toggle dark/light gere en js -->
-                     <button id="theme-toggle" aria-label="changer de theme">
+               <div class="nav-actions">
+               
+                     <button id="theme-toggle" >
                         <i class="bi bi-moon-stars-fill"></i>
                      </button>
-                        <!-- Menu hamburger pour mobile -->
-                         <button class="hamburger" aria-label="Ouvrir le menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                     
+                         <button class="hamburger" >
+                           <i class="bi bi-list"></i>
                          </button>
                 </div>
             </div>
 
         </nav>
      </header>
-     <section class="contact">
+     <!-- CONTACT -->
+     <section class="contact fade-in">
         <div class="contact-container">
-            <div class="form">
-                <h2>Inscrivez-vous a la conference</h2>
-                <form action="https://formspree.io/f/xxxxxxxx" id="contactForm">
-                    <div class="form-champ">
-                        <label for="fullname">Nos complet</label>
-                        <input type="text" id="fullname">
-                    </div>
-                    <div class="form-champ">
-                        <label for="email">Address e-email</label>
-                        <input type="email" id="email">
-                    </div>
-                    <div class="form-champ">
-                         <label for="phone">Telephone</label>
-                        <input type="tel" id="phone">
-                    </div>
-                     <div class="form-champ">
+                <div class="form">
+                    <h2>Inscrivez-vous à la conférence</h2>
+                    <form id="contact-form">
+                        <div class="form-champ">
+                            <label for="fullname">Nom complet</label>
+                            <input type="text" id="fullname">
+                            <small class="erreur-message"></small>
+                        </div>
+                        <div class="form-champ">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" id="email">
+                             <small class="erreur-message"></small>
+                        </div>
+                        <div class="form-champ">
+                            <label for="phone">Téléphone </label>
+                            <input type="tel" id="phone">
+                             <small class="erreur-message"></small>
+                        </div>
+                        <div class="form-champ">
                             <label for="participations">Type de participations</label>
                             <select  id="participations">
                                 <option value="">Choisir</option>
@@ -71,32 +73,36 @@
                                 <option >Sponsor</option>
                                 <option >Presse</option>
                             </select>
-                         </div>
-                         <div class="form-champ">  
+                             <small class="erreur-message"></small>
+                        </div>
+                        <div class="form-champ">
                             <label for="pays">Pays</label>
                             <select  id="pays">
                                 <option value="">Selectionner</option>
                                 <option >Sénégal</option>
                                  <option >Cote d'Ivoire</option>
-                                 <option >Mali</option>
-                                  <option >Ghana</option>
-                                  <option >Nigeria</option>
-                                   <option >Cameroun</option>
-                                    <option >Bénin</option>
-                                   <option >Togo</option>
-                                     <option >RDC</option>
-                                      <option >Burkina Fasso</option>
+                                  <option >Mali</option>
+                                   <option >Ghana</option>
+                                    <option >Nigeria</option>
+                                     <option >Cameroun</option>
+                                      <option >Bénin</option>
+                                       <option >Togo</option>
+                                        <option >RDC</option>
+                                         <option >Burkina Fasso</option>
                             </select>
+                             <small class="erreur-message"></small>
                         </div>
                         <div class="form-champ">
                             <label for="message">Motivations</label>
-                            <textarea id="motivations" rows="6"></textarea>
+                            <textarea id="message" rows="6"></textarea>
+                             <small class="erreur-message"></small>
                         </div>
                         <button type="submit">Envoyer ma demande </button>
                     </form>
+                  
                     <div id="form-message"></div>
                      </div>
-                   <!-- Colonne droite : informations pratiques -->
+                  
                     <div class="contact-info">
                         <h2>Informations pratiques</h2>
                         
@@ -125,7 +131,8 @@
                         </div>
                 </div>
         </section>
-         <section class="faq">
+        <!-- SECTION FAQ -->
+         <section class="faq slide-in ">
             <h2>Questions fréquentes </h2>
             <div class="faq-item">
                 <input type="checkbox" id="faq1">
@@ -169,7 +176,7 @@
 
              </main>
      </section>
-
+<!-- FOOTER -->
      <footer class="footer">
 
     <div class="footer-container">
@@ -207,7 +214,7 @@
             <p><i class="bi bi-envelope"></i> contact@africonnect.com</p>
             <p><i class="bi bi-telephone"></i> +221 77 446 30 21</p>
 
-            <button id="back-to-top">
+            <button class="back-to-top">
                 <i class="bi bi-arrow-up"></i>
             </button>
 

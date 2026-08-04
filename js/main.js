@@ -76,123 +76,63 @@ if (annee) {
     annee.textContent = new Date().getFullYear();
 }
 // FORMULAIRE D'INSCRIPTION
+const form = document.querySelector("form");
+if(form){ 
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let valide = true;
+    const fullname = document.getElementById("fullname");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const participation = document.getElementById("participations");
+    const pays = document.getElementById("pays");
+    const message = document.getElementById("message");
 
-
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-
-    const formMessage = document.getElementById("form-message");
-
-    contactForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        const fullname = document.getElementById("fullname").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const participations = document.getElementById("participations").value;
-        const pays = document.getElementById("pays").value;
-        const motivations = document.getElementById("motivations").value.trim();
-
-        let erreurs = [];
-
-        if (fullname.length < 3) {
-            erreurs.push("Veuillez saisir votre nom complet.");
-        }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailRegex.test(email)) {
-            erreurs.push("Adresse e-mail invalide.");
-        }
-
-        if (phone.length < 9) {
-            erreurs.push("Numéro de téléphone invalide.");
-        }
-
-        if (participations === "") {
-            erreurs.push("Choisissez un type de participation.");
-        }
-
-        if (pays === "") {
-            erreurs.push("Choisissez votre pays.");
-        }
-
-        if (motivations.length < 10) {
-            erreurs.push("Veuillez détailler vos motivations.");
-        }
-
-        if (erreurs.length > 0) {
-
-            formMessage.innerHTML = erreurs.join("<br>");
-            formMessage.style.color = "red";
-
-            return;
-        }
-
-        formMessage.innerHTML =
-            "✅ Votre inscription à AfriConnect Summit a été enregistrée avec succès !";
-
-        formMessage.style.color = "green";
-
-        contactForm.reset();
-
+    document.querySelectorAll(".erreur-message").forEach(function (erreur) {
+        erreur.textContent = "";
     });
 
+    if (fullname.value.trim() === "") {
+        fullname.nextElementSibling.textContent = "Le nom est obligatoire.";
+        valide = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email.value.trim())) {
+        email.nextElementSibling.textContent = "Adresse e-mail invalide.";
+        valide = false;
+    }
+
+    const chiffres = phone.value.replace(/\D/g, "");
+
+    if (chiffres.length < 8) {
+        phone.nextElementSibling.textContent =
+            "Le téléphone doit contenir au moins 8 chiffres.";
+        valide = false;
+    }
+    if (participation.value === "") {
+        participation.nextElementSibling.textContent =
+            "Choisissez un type de participation.";
+        valide = false;
+    }
+    if (pays.value === "") {
+        pays.nextElementSibling.textContent =
+            "Sélectionnez un pays.";
+        valide = false;
+    }
+    if (message.value.trim().length < 20) {
+        message.nextElementSibling.textContent =
+            "La motivation doit contenir au moins 20 caractères.";
+        valide = false;
+    }
+    if (valide) {
+        alert("Votre demande a été envoyée avec succès.");
+        form.reset();
+    }
+});
 }
 
-//ANIMATION AU SCROLL//
-const elements = document.querySelectorAll(
-  "section, .card, .speaker-card, .sponsor-card, .stat-card, .feature-card, .faq-item, form, h1, h2, h3, p, .btn"
-);
-
-// État initial
-elements.forEach((el) => {
-  if (!el.closest("footer")) {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "all 0.8s ease";
-  }
-});
-
-// Animation au scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-      observer.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.15
-});
-
-elements.forEach((el) => {
-  if (!el.closest("footer")) {
-    observer.observe(el);
-  }
-});
-
-const tabs = document.querySelectorAll(".btn-tab");
-const contents = document.querySelectorAll(".btn-content");
-
-tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-
-        tabs.forEach(btn => btn.classList.remove("active"));
-        contents.forEach(content => content.classList.remove("active"));
-
-        tab.classList.add("active");
-        contents[index].classList.add("active");
-
-    });
-});
-
-// =========================
-// ONGLETS DU PROGRAMME
-// =========================
 // FILTRAGE ONGLETS PROGRAMME
 const bouttons = document.querySelectorAll('.btn-tab');
 const contenus = document.querySelectorAll('.tab-container');

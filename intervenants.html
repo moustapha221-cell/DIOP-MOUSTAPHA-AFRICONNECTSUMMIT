@@ -30,15 +30,13 @@
 
                 </ul>
                 <div class="nav-actions">
-                    <!-- Toggle dark/light gere en js -->
-                     <button id="theme-toggle" aria-label="changer de theme">
+                
+                     <button id="theme-toggle" >
                         <i class="bi bi-moon-stars-fill"></i>
                      </button>
-                        <!-- Menu hamburger pour mobile -->
-                         <button class="hamburger" aria-label="Ouvrir le menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                     
+                         <button class="hamburger" >
+                           <i class="bi bi-list"></i>
                          </button>
                 </div>
             </div>
@@ -46,75 +44,78 @@
         </nav>
      </header>
      <main>
-        <section class="hero-interne">
+        <!-- FIL ARIALE -->
+        <section class="hero-interne fade-in">
             <h2>Nos intervenants</h2>
-            <p><a href="index.html">Accueil</a> > intervenants</p>
+            <p><a href="index.html">Accueil</a> - intervenants</p>
         </section>
-        <section class="filtre">
 
+        <!-- FILTRES-->
+        <section class="filtre">
             <div class="vedette-t">
                 <span>Expert et intervenants</span>
                 <h2>Nos intervenants</h2>
                 <p>Découvrez les professionels qui partageront leur experience pendant AfriConnectSummit </p>
             </div>
-            <div class="filters">
-                <button class="filter-btn active">Tous</button>
-                <button class="filter-btn">Data</button>
-                <button class="filter-btn">Design</button>
-                <button class="filter-btn">Business</button>
-                <button class="filter-btn">IA et Tech</button>
+            <div class="filters slide-in">
+                <button class="filter-btn active" data-filter="Tous">Tous</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+                <button class="filter-btn" data-filter="desing">Design</button>
+                <button class="filter-btn" data-filter="Business">Business</button>
+                <button class="filter-btn" data-filter="ia">IA et Tech</button>
             </div>
         </section>
+        <section class="card-intervenants">   
          <div class="sec-grid">
-               <div class="sec-card"> 
+               <div class="sec-card zoom-in"  data-categori="ia"> 
                     <img src="images/profil-f.jpg.jpg" alt="profil intervenants">
                     <h3>Mada coly</h3>
                     <p>Experte en IA</p>
                     <span>Sénégal</span>
                  </div>
-               <div class="sec-card"> 
+               <div class="sec-card zoom-in" data-categori="Business"> 
                     <img src="images/profil-f2.jpg.jpg" alt="profil intervenants">
                     <h3>Jean pierre</h3>
                     <p>entrepreneurs tech</p>
                     <span>Ghana </span>
                </div>
-                <div class="sec-card"> 
+                <div class="sec-card zoom-in" data-categori="desing"> 
                     <img src="images/profil-f3.jpg" alt="profil intervenants">
                     <h3>Fatou Ndiaye</h3>
                     <p>UI/UX Designer</p>
                     <span>Sénégal </span>
                  </div>
-                 <div class="sec-card">
+                 <div class="sec-card zoom-in" data-categori="data">
                     <img src="images/profil-f4.jpg" alt="profil intervenants">
                     <h3>Cheickou fofana</h3>
                     <p>Data Scientist</p>
                     <span>Cote d'Ivoire</span>
                  </div>
-                 <div class="sec-card">
+                 <div class="sec-card zoom-in" data-categori="ia">
                     <img src="images/profil-m5.jpg" alt="profil intervenants">
                     <h3>Assy mbaye</h3>
                     <p>Ingenieur machine laerning</p>
                     <span>Mali</span>
                  </div>
-                 <div class="sec-card"> 
+                 <div class="sec-card zoom-in" data-categori="Business"> 
                     <img src="images/profil-f5.jpg" alt="profil intervenants">
                     <h3>Grace Owusu</h3>
                     <p>investisseuse Startup</p>
                     <span>Ghana </span>
              </div>
-              <div class="sec-card">
+              <div class="sec-card zoom-in" data-categori="desing">
                     <img src="images/profil-m4.jpg" alt="profil intervenants">
                     <h3>Jean Bemba </h3>
                     <p>Product Designer</p>
                     <span>RDC</span>
                  </div>
-             <div class="sec-card"> 
+             <div class="sec-card zoom-in" data-categori="data"> 
                     <img src="images/profil-m3.jpg" alt="profil intervenants">
                     <h3>David Nguessan </h3>
                     <p> cloud Architect</p>
                     <span>cote d'ivoire </span>
              </div>
-                <div class="sec-card"> 
+                <div class="sec-card zoom-in" data-categori="ia"> 
                     <img src="images/profil-f7.jpg" alt="profi intervenants">
                     <h3>Katy sakho </h3>
                     <p>Experte en Robotique</p>
@@ -124,7 +125,7 @@
         </section>
     
      </main>
-
+<!-- FOOTER -->
      <footer class="footer">
 
     <div class="footer-container">
@@ -162,7 +163,7 @@
             <p><i class="bi bi-envelope"></i> contact@africonnect.com</p>
             <p><i class="bi bi-telephone"></i> +221 77 446 30 21</p>
 
-            <button id="back-to-top">
+            <button class="back-to-top">
                 <i class="bi bi-arrow-up"></i>
             </button>
 

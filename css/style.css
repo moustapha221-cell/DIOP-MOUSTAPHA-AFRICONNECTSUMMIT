@@ -91,6 +91,7 @@
 }
 .hero-content{
     max-width: 850px;
+    animation: apparition 1s ease forwards;
 }
 .hero-t{
     margin-bottom: 18px;
@@ -167,6 +168,16 @@
 }
 .countdown-label {
     font-size: 14px;
+}
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 /* SECTION */
 section {
@@ -872,7 +883,11 @@ img{
         background: var(--quatery);
         box-shadow: 0 10px 20px rgba(0,0,0,.12);
     }
-
+.navbar .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
     .nav-links.active{
         display: flex;
     }
@@ -896,9 +911,15 @@ img{
         align-items: center;
         gap: 8px;
     }
-
+.nav-actions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
     #theme-toggle,
     .hamburger{
+        position: static;
         width: 38px;
         height: 38px;
         display: flex;
@@ -911,6 +932,7 @@ img{
         background: transparent;
         font-size: 1.7rem;
         cursor: pointer;
+        flex-direction: column;
     }
 
     /* HERO */
@@ -1227,7 +1249,7 @@ img{
         margin-bottom: 10px;
     }
 }
-
+/* CSS DARK-MODE */
 body.dark-mode {
     --primary: #121212;
     --secondary: #ffffff;
@@ -1291,7 +1313,10 @@ body.dark-mode .btn-outline {
     color: #fff;
     border-color: #9d4edd;
 }
-
+.erreur-message{
+    color: red;
+    font-size: 1rem;
+}
 /* Bouton retour en haut */
 .back-to-top{
     position: fixed;
